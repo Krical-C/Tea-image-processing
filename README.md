@@ -1,0 +1,7 @@
+# Tea-image-processing
+对茶叶图像进行处理
+
+主要文件是transform.py,能够对文件目录下的tif光谱图像进行读取，并且通过sift算法将光谱图像调整成同一空间位置（模板为红外光及ir），并计算各种植物指数，合成真彩图和伪彩图。
+
+split_train_val.py 是对annotations文件目录下的voc数据集进行划分，在通过voc_to_coco.py将voc格式转化为coco格式，
+这个操作用于将标注的数据集格式转化为maskrcnn-benchmark所需数据的数据集格式
