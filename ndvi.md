@@ -11,7 +11,7 @@ ndvi[ndvi > 0.75] = 0
 
 ##### NDVI：
 
-![20220811103141](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811103141.png)
+![20220811103141](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record\20220811103141.png)
 
 ##### NDVI直方图：
 
