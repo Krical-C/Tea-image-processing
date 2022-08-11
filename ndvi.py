@@ -109,14 +109,6 @@ for i in range(0, len(tif_list), step):  # 遍历列表
     template_min, template_max, template_data = get_data_band(tif_list[i + 3])  # ir
     template_data_init8 = tiftoint8(template_min, template_max, template_data)
 
-    # match1_min, match1_max, match1_data = get_data_band(tif_list[i])              # b
-    # match1_data_init8 = tiftoint8(match1_min, match1_max, match1_data)
-    # imgOut1, _, _ = siftImageAlignment(template_data_init8, match1_data_init8)
-
-    # match2_min, match2_max, match2_data = get_data_band(tif_list[i + 1])  # g
-    # match2_data_init8 = tiftoint8(match2_min, match2_max, match2_data)
-    # imgOut2, _, _ = siftImageAlignment(template_data_init8, match2_data_init8)
-
     match3_min, match3_max, match3_data = get_data_band(tif_list[i + 2])  # r
     match3_data_init8 = tiftoint8(match3_min, match3_max, match3_data)
     imgOut3, _, _ = siftImageAlignment(template_data_init8, match3_data_init8)
@@ -135,26 +127,13 @@ for i in range(0, len(tif_list), step):  # 遍历列表
 
     ndvi = (IR - R) / (IR + R)
     ndvi[ndvi > 0.750] = 0
-    ndvi[ndvi < 0.711] = 0
+    ndvi[ndvi < 0.590] = 0
 
     plt.title("ndvi")
     plt.imshow(ndvi)
     plt.colorbar()
     plt.show()
-    # 计算gndvi
-    # gndvi = (IR - G) / (IR + G)
-    # plt.figure(figsize=(20, 10))
-    # plt.title("gndvi")
-    # plt.imshow(gndvi)
-    # plt.colorbar()
 
-    # 计算osavi
-    # osavi= (IR - R) / (IR + R + 0.16)
-    # plt.figure(figsize=(20, 10))
-    # plt.title("osavi")
-    # plt.imshow(osavi)
-    # plt.colorbar()
-    # 直方图
     plt.hist(ndvi.ravel(), 255, [0, 1])
     plt.ylim(0, 10000)
 
@@ -163,31 +142,32 @@ for i in range(0, len(tif_list), step):  # 遍历列表
     # print(ret/256)
     plt.show()
 
-    # 筛选ndvi的范围
-    # ndvi[ndvi < 0.65] = 0
-    # ndvi[ndvi > 0.8] = 0
-    # ndvi[ndvi > 0] = 1
 
-    # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (15, 15))
-    # dst = cv2.dilate(ndvi, kernel)
-    # B = imgOut1 * ndvi
-    # G = imgOut2 * ndvi
-    # R = imgOut3 * ndvi
-    # IR = template_data_init8 * ndvi
-    # merge=np.stack((gndvi*256,ndvi*256,osavi*256),axis=2)
-    # cv2.imwrite(tif_list[i].split('.')[0] + "M.jpg", merge)
+    def nothing(x):
+        pass
+    cv2.namedWindow('image')
+    cv2.createTrackbar('ret', 'image', 0, 255, nothing)
+    img = np.zeros((1300, 1600, 3), np.uint8)
+    print(img.shape)
+    NDVI = np.uint8(ndvi * 256)
+    img[:, :, 1] = NDVI
 
-    # 合成真彩图
-    # true_color = np.stack((B, G, R), axis=2)
+    print(NDVI.shape)
+    while (1):
+        NDVI = np.uint8(ndvi * 256)
+        cv2.imshow('image', img)
 
-    # 合成假彩图
-    # false_color = np.stack((R, IR, G), axis=2)
+        k = cv2.waitKey(1) & 0xFF
+        if k == 27:
+            break
+        ret = cv2.getTrackbarPos('ret', 'image')
+        NDVI[NDVI < NDVI/256*(ret+1)] = 0
+        img[:, :, 1] = NDVI
+    cv2.destroyAllWindows()
+
     b, g, r = cv2.split(imgOut_bgr)
     ndvi[ndvi > 0] = 1
-    # 输出
-    # cv2.imwrite(tif_list[i].split('.')[0] + "T.jpg", true_color)
-    # cv2.imwrite(tif_list[i].split('.')[0] + "F.jpg", false_color)
+
 
     # 输出ndvi遮罩下的真彩图
     cv2.imwrite(jpg_list[i // 5].split('.')[0] + "bgr.jpg", np.stack((b * ndvi, g * ndvi, r * ndvi), axis=2))
-    # cv2.imwrite(jpg_list[i // 5].split('.')[0] + "grir.jpg", np.stack((G * ndvi, R * ndvi, IR * ndvi), axis=2))
