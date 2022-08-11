@@ -15,7 +15,7 @@ ndvi[ndvi > 0.75] = 0
 
 ##### NDVI直方图：
 
-![20220811103159](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811103159.png)
+![20220811103159](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811103159.png)
 
 
 
@@ -39,88 +39,88 @@ print(ret/256)
 
 ndvi：
 
-![20220811104857](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811104857.png)
+![20220811104857](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811104857.png)
 
 ndvi直方图：
 
-![image-20220811105213596](https://github.com/Krical-C/Tea-image-processing/blob/master/record\image-20220811105213596.png)
+![image-20220811105213596](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/image-20220811105213596.png)
 
-![20220811105322](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811105322.png)
+![20220811105322](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811105322.png)
 
 调整y值范围0~10000
 
-![20220811105856](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811105856.png)
+![20220811105856](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811105856.png)
 
 筛选图：
 
-![DJI_0150bgr-0.261~0.750](https://github.com/Krical-C/Tea-image-processing/blob/master/record\DJI_0150bgr-0.261~0.750.jpg)
+![DJI_0150bgr-0.261~0.750](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/DJI_0150bgr-0.261~0.750.jpg)
 
 ##### 选取0.550~0.750的范围：
 
 ndvi：
 
-![image-20220811113342647](https://github.com/Krical-C/Tea-image-processing/blob/master/record\image-20220811113342647.png)
+![image-20220811113342647](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/image-20220811113342647.png)
 
 ndvi直方图：
 
-![20220811113444](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811113444.png)
+![20220811113444](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811113444.png)
 
 筛选图：
 
-![DJI_0150bgr-0.550~0.750](https://github.com/Krical-C/Tea-image-processing/blob/master/record\DJI_0150bgr-0.550~0.750.jpg)
+![DJI_0150bgr-0.550~0.750](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/DJI_0150bgr-0.550~0.750.jpg)
 
 ##### 选取0.590~0.750的范围：
 
 ndvi：
 
-![20220811142931](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811142931.png)
+![20220811142931](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811142931.png)
 
 nivi的直方图：
 
-![20220811142951](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811142951.png)
+![20220811142951](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811142951.png)
 
 筛选图：
 
-![DJI_0150bgr-0.590~0.750](https://github.com/Krical-C/Tea-image-processing/blob/master/record\DJI_0150bgr-0.590~0.750.jpg)
+![DJI_0150bgr-0.590~0.750](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/DJI_0150bgr-0.590~0.750.jpg)
 
 ##### 选取0.660~0.750的范围：
 
 ndvi：
 
-![20220811154456](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811154456.png)
+![20220811154456](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811154456.png)
 
 nivi的直方图：
 
-![20220811154540](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811154540.png)
+![20220811154540](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811154540.png)
 
 筛选图：
 
-![DJI_0150bgr-0.660~0.750](https://github.com/Krical-C/Tea-image-processing/blob/master/record\DJI_0150bgr-0.660~0.750.jpg)
+![DJI_0150bgr-0.660~0.750](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/DJI_0150bgr-0.660~0.750.jpg)
 
 ##### 选取0.680~0.750的范围：
 
 ndvi：
 
-![20220811154826](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811154826.png)
+![20220811154826](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811154826.png)
 
 nivi的直方图：
 
-![20220811154859](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811154859.png)
+![20220811154859](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811154859.png)
 
 筛选图：
 
-![DJI_0150bgr-0.660~0.750](https://github.com/Krical-C/Tea-image-processing/blob/master/record\DJI_0150bgr-0.660~0.750.jpg)
+![DJI_0150bgr-0.660~0.750](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/DJI_0150bgr-0.660~0.750.jpg)
 
 ##### 选取0.711~0.750的范围：
 
 ndvi：
 
-![20220811161402](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811161402.png)
+![20220811161402](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811161402.png)
 
 nivi的直方图：
 
-![20220811161431](https://github.com/Krical-C/Tea-image-processing/blob/master/record\20220811161431.png)
+![20220811161431](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/20220811161431.png)
 
 筛选图：
 
-![DJI_0150bgr-0.711~0.750](https://github.com/Krical-C/Tea-image-processing/blob/master/record\DJI_0150bgr-0.711~0.750.jpg)
+![DJI_0150bgr-0.711~0.750](https://raw.githubusercontent.com/Krical-C/Tea-image-processing/master/record/DJI_0150bgr-0.711~0.750.jpg)
